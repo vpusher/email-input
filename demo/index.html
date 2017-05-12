@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>email-input demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../email-input.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Empty email-input</h3>
+      <demo-snippet>
+        <template>
+          <email-input></email-input>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic email-input with some data</h3>
+      <demo-snippet>
+        <template>
+          <email-input id="input1"></email-input>
+          <script>
+              input1.data = [
+                  { label: 'John', email: 'John@gmail.com' },
+                  { label: 'Ben', email: 'ben@protonmail.com' },
+                  { label: 'Alice', email: 'alice@yahoo.com' },
+                  { label: 'Tic & Tac', email: 'tictac@gmail.com' },
+                  { email: 'bob@protonmail.com' }
+              ];
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic email-input with some pre-selected contacts</h3>
+      <demo-snippet>
+        <template>
+          <email-input id="input2"></email-input>
+          <script>
+              input2.data = [
+                  { label: 'John', email: 'John@gmail.com' },
+                  { label: 'Ben', email: 'ben@protonmail.com' },
+                  { label: 'Alice', email: 'alice@yahoo.com' },
+                  { label: 'Tic & Tac', email: 'tictac@gmail.com' },
+                  { email: 'bob@protonmail.com' }
+              ];
+
+              input2.selection = [
+                  { label: 'VPusher', email: 'vpusher@gmail.com' }
+              ];
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

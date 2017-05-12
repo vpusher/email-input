@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>playground</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../email-input.html">
+</head>
+<body>
+    <email-input></email-input>
+</body>
+<script>
+    var input = document.querySelector('email-input');
+
+    input.data = [
+        { label: 'John', email: 'John@gmail.com' },
+        { label: 'Ben', email: 'ben@protonmail.com' },
+        { label: 'Alice', email: 'alice@yahoo.com' },
+        { label: 'Tic & Tac', email: 'tictac@gmail.com' },
+        { email: 'bob@protonmail.com' }
+    ];
+
+    input.selection = [
+        { label: 'VPusher', email: 'flo@gmail.com' }
+    ];
+</script>
+</html>
